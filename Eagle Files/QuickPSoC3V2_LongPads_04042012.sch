@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.1">
+<eagle version="6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -11767,8 +11767,6 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <part name="VDDD5" library="cypress_withsoc3" deviceset="VDDD" device=""/>
 <part name="C5" library="rcl" deviceset="C-EU" device="C0805K" value="1uF"/>
 <part name="X1" library="SparkFun" deviceset="USB-MINIB" device="-5PIN"/>
-<part name="R1" library="rcl" deviceset="R-EU_" device="M0805" value="22ohm"/>
-<part name="R2" library="rcl" deviceset="R-EU_" device="M0805" value="22ohm"/>
 <part name="RESET" library="switch-omron" deviceset="10-XX" device="" value="PSHBTTN"/>
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
 <part name="PWR-LVL" library="jumper" deviceset="JP2E" device="" value="LVL"/>
@@ -11793,7 +11791,6 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <part name="H1" library="holes" deviceset="MOUNT-PAD-ROUND" device="2.8"/>
 <part name="H3" library="holes" deviceset="MOUNT-PAD-ROUND" device="2.8"/>
 <part name="FRAME1" library="SparkFun" deviceset="FRAME-A3" device=""/>
-<part name="C3" library="SparkFun" deviceset="CAP_POL" device="PTH2" value="10uF"/>
 <part name="SUPPLY10" library="supply2" deviceset="GND" device=""/>
 <part name="R3" library="rcl" deviceset="R-EU_" device="M0805" value="1k"/>
 <part name="LED2" library="SparkFun" deviceset="LED" device="1206" value="RED_LED"/>
@@ -11865,8 +11862,6 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <instance part="VDDD5" gate="G$1" x="78.74" y="78.74" rot="MR0"/>
 <instance part="C5" gate="G$1" x="-33.02" y="83.82"/>
 <instance part="X1" gate="G$1" x="106.68" y="66.04" rot="R90"/>
-<instance part="R1" gate="G$1" x="58.42" y="53.34"/>
-<instance part="R2" gate="G$1" x="73.66" y="48.26"/>
 <instance part="RESET" gate="1" x="157.48" y="116.84" rot="R270"/>
 <instance part="SUPPLY1" gate="GND" x="106.68" y="40.64"/>
 <instance part="PWR-LVL" gate="1" x="154.94" y="60.96"/>
@@ -11885,13 +11880,12 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <instance part="SUPPLY6" gate="GND" x="-33.02" y="43.18"/>
 <instance part="SUPPLY7" gate="GND" x="-33.02" y="73.66"/>
 <instance part="SUPPLY8" gate="GND" x="-20.32" y="78.74"/>
-<instance part="SUPPLY9" gate="GND" x="167.64" y="109.22"/>
+<instance part="SUPPLY9" gate="GND" x="162.56" y="109.22"/>
 <instance part="C2" gate="G$1" x="154.94" y="50.8"/>
 <instance part="P+1" gate="1" x="162.56" y="71.12"/>
 <instance part="H1" gate="G$1" x="236.22" y="129.54" rot="R180"/>
 <instance part="H3" gate="G$1" x="236.22" y="114.3" rot="R180"/>
 <instance part="FRAME1" gate="G$1" x="-48.26" y="-119.38"/>
-<instance part="C3" gate="G$1" x="116.84" y="48.26"/>
 <instance part="SUPPLY10" gate="GND" x="243.84" y="121.92" rot="R90"/>
 <instance part="R3" gate="G$1" x="66.04" y="-33.02" rot="R180"/>
 <instance part="LED2" gate="G$1" x="78.74" y="-33.02" rot="R90"/>
@@ -12034,19 +12028,6 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <wire x1="-22.86" y1="-60.96" x2="-17.78" y2="-60.96" width="0.1524" layer="91"/>
 <label x="-22.86" y="-60.96" size="1.778" layer="95"/>
 <pinref part="JP1" gate="G$1" pin="6"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<wire x1="68.58" y1="48.26" x2="53.34" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D+,SWDIO/P15[6]"/>
-<pinref part="R2" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="D-,SWDCK/P15[7]"/>
-<pinref part="R1" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="XRES" class="0">
@@ -12392,30 +12373,27 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 </net>
 <net name="D-" class="0">
 <segment>
-<wire x1="78.74" y1="48.26" x2="101.6" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="48.26" x2="101.6" y2="63.5" width="0.1524" layer="91"/>
-<label x="78.74" y="48.26" size="1.778" layer="95"/>
-<pinref part="R2" gate="G$1" pin="2"/>
+<label x="76.2" y="48.26" size="1.778" layer="95"/>
 <pinref part="X1" gate="G$1" pin="D+"/>
+<wire x1="101.6" y1="48.26" x2="53.34" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="D+,SWDIO/P15[6]"/>
 </segment>
 </net>
 <net name="D+" class="0">
 <segment>
-<wire x1="63.5" y1="53.34" x2="99.06" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="53.34" x2="99.06" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="53.34" x2="99.06" y2="63.5" width="0.1524" layer="91"/>
 <label x="76.2" y="53.34" size="1.778" layer="95"/>
-<pinref part="R1" gate="G$1" pin="2"/>
 <pinref part="X1" gate="G$1" pin="D-"/>
+<pinref part="U$1" gate="G$1" pin="D-,SWDCK/P15[7]"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
 <wire x1="106.68" y1="43.18" x2="106.68" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="43.18" x2="116.84" y2="43.18" width="0.1524" layer="91"/>
-<junction x="106.68" y="43.18"/>
 <pinref part="X1" gate="G$1" pin="GND"/>
 <pinref part="SUPPLY1" gate="GND" pin="GND"/>
-<pinref part="C3" gate="G$1" pin="-"/>
 </segment>
 <segment>
 <wire x1="10.16" y1="-30.48" x2="15.24" y2="-30.48" width="0.1524" layer="91"/>
@@ -12493,7 +12471,6 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <segment>
 <wire x1="162.56" y1="116.84" x2="162.56" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="114.3" x2="162.56" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="111.76" x2="167.64" y2="111.76" width="0.1524" layer="91"/>
 <junction x="162.56" y="114.3"/>
 <pinref part="RESET" gate="1" pin="S"/>
 <pinref part="RESET" gate="1" pin="S1"/>
@@ -12559,10 +12536,8 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <wire x1="96.52" y1="63.5" x2="96.52" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="50.8" x2="116.84" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="116.84" y1="55.88" x2="116.84" y2="50.8" width="0.1524" layer="91"/>
-<junction x="116.84" y="50.8"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
 <pinref part="X1" gate="G$1" pin="VBUS"/>
-<pinref part="C3" gate="G$1" pin="+"/>
 </segment>
 </net>
 <net name="N$1" class="0">
