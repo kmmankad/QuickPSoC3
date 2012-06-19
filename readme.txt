@@ -21,6 +21,9 @@ This board:
 
 I have successfully etched this using nothing but ordinary copier paper and a household iron,on some paper phenolic copper clad.So you dont require special techniques to etch it.
 
+Updated 19-Jun-12:
+Did away with some more components,to make this a quick-er board to put together.
+Edited silkscreen at some places to make it more meaningful.
 
 -kmmankad
 
