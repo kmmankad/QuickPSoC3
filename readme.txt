@@ -8,6 +8,8 @@ The goal is to have a home-etchable,cheap to put together,USB capable PSoC3 envi
 
 To know more about the PSoC3 platform - http://www.cypress.com/?id=2232
 
+Board files are made in Eagle 6.2 LIGHT Edition.
+
 This board:
 -Uses the CY8C3866PVI-021/CY8C3246PVI-147 or any PSoC3 part in a 48pin SSOP package
 -Has 26 GPIOs brought out to 0.1" headers.
